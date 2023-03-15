@@ -1,6 +1,6 @@
 # Book-Repository-Nodejs
 
-API Documentation 
+# API Documentation 
 
 * [Register](https://github.com/aayushbhan/Book-Repository-Nodejs/blob/main/BookRepositoryServer/app.js#L54) 
   * Request Type - POST
@@ -89,3 +89,13 @@ API Documentation
       * Returns a 200 on successful paginated books listing
           * Body - 
               * List of Book Objects
+              
+              
+              
+ # Steps to Run Application 
+ 
+ 1. Checkout this repository 
+ 2. Make sure Docker is installed
+ 3. To start server `cd BookRepositoryServer` and run `docker-compose up` to start the mongo and node app containers
+ 4. To start the client in a new terminal, run 'npm install socket.io-client` then `node socket-client.js`
+ 5. Use the postman collection request json in the repo to hit the APIs
