@@ -1,0 +1,246 @@
+{
+	"info": {
+		"_postman_id": "cdacc73e-3a6b-4f25-8dbf-80d23b8f8b6c",
+		"name": "RaftLabs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register a new user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_name\": \"aayush\",\n    \"last_name\": \"bhan\",\n    \"email\": \"aayushbhan@gmail.com\",\n    \"password\": \"abcd@12345678\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login as a user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"aayushbhan@gmail.com\",\n    \"password\": \"abcd@12345678\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add a new book",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjQwZDhmMzBlZTMzZTZhM2IxNmNiZDM0IiwiZW1haWwiOiJhYXl1c2hiaGFuQGdtYWlsLmNvbSIsImlhdCI6MTY3ODYzMjI4OSwiZXhwIjoxNjc4NjM5NDg5fQ.W0fsCfqIIPAcFAWAjR6Z9bJb3r75HgiqlS-7ev7CKkk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"bookId\":\"book-6\",\n    \"title\":\"Harry Potter and The Half Blood Prince\",\n    \"author\": \"J.K Rowling\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/add-book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"add-book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update an existing book",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjQwZDhmMzBlZTMzZTZhM2IxNmNiZDM0IiwiZW1haWwiOiJhYXl1c2hiaGFuQGdtYWlsLmNvbSIsImlhdCI6MTY3ODYxMTU0OSwiZXhwIjoxNjc4NjE4NzQ5fQ.aY0EX3lFz2tj1agiSUBBfn7SlwW30NLQ5lk73LbjaWs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\":\"Harry Potter and The Deathly Hallows\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/update-book/book-2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"update-book",
+						"book-2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a book",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjQwZDhmMzBlZTMzZTZhM2IxNmNiZDM0IiwiZW1haWwiOiJhYXl1c2hiaGFuQGdtYWlsLmNvbSIsImlhdCI6MTY3ODYxMTU0OSwiZXhwIjoxNjc4NjE4NzQ5fQ.aY0EX3lFz2tj1agiSUBBfn7SlwW30NLQ5lk73LbjaWs",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:4001/delete-book/book-1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"delete-book",
+						"book-1"
+					],
+					"query": [
+						{
+							"key": "x-access-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjQwZDhmMzBlZTMzZTZhM2IxNmNiZDM0IiwiZW1haWwiOiJhYXl1c2hiaGFuQGdtYWlsLmNvbSIsImlhdCI6MTY3ODYxMTU0OSwiZXhwIjoxNjc4NjE4NzQ5fQ.aY0EX3lFz2tj1agiSUBBfn7SlwW30NLQ5lk73LbjaWs",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get paginated sorted book list",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjQwZDhmMzBlZTMzZTZhM2IxNmNiZDM0IiwiZW1haWwiOiJhYXl1c2hiaGFuQGdtYWlsLmNvbSIsImlhdCI6MTY3ODYzMjI4OSwiZXhwIjoxNjc4NjM5NDg5fQ.W0fsCfqIIPAcFAWAjR6Z9bJb3r75HgiqlS-7ev7CKkk",
+						"type": "text"
+					},
+					{
+						"key": "size",
+						"value": "3",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:4001/list-books?page=2&limit=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"list-books"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						},
+						{
+							"key": "limit",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Book using bookId",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjQwZDhmMzBlZTMzZTZhM2IxNmNiZDM0IiwiZW1haWwiOiJhYXl1c2hiaGFuQGdtYWlsLmNvbSIsImlhdCI6MTY3ODcxNDgzNCwiZXhwIjoxNjc4NzIyMDM0fQ.Yr18yW4uSpkJEqS5QGHBmtD-pU-fLG_qfEzGTYfiprQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:4001/search-book?bookId=book-3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"search-book"
+					],
+					"query": [
+						{
+							"key": "bookId",
+							"value": "book-3"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
