@@ -2,7 +2,7 @@
 const io = require('socket.io-client');
 
 // Connect to the WebSocket server
-const socket = io("http://localhost:4001");
+const socket = io("http://localhost:4000");
 
 console.log("connected to server");
 // Listen for real-time updates on the "book-added" event
