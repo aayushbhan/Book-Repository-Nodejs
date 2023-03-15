@@ -97,5 +97,5 @@
  1. Checkout this repository 
  2. Make sure Docker is installed
  3. To start server `cd BookRepositoryServer` and run `docker-compose up` to start the mongo and node app containers
- 4. To start the client in a new terminal, run 'npm install socket.io-client` then `node socket-client.js`
+ 4. To start the client in a new terminal, run `npm install socket.io-client` then `node socket-client.js`
  5. Use the postman collection request json in the repo to hit the APIs
