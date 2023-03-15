@@ -28,7 +28,7 @@ io.on('connection', (socket) => {
   });
 
   // Add a custom event listener
-  socket.on('customEvent', (data) => {
+  socket.on('messageFromClient', (data) => {
     console.log('Received data:', data);
   });
 });
